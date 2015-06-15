@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h1>Categorias</h1></div>
+        <script>
+            var nome = prompt('Digite seu nome: ', 'ex.: Fulano');
+            var sexo = prompt('Informe seu sexo:', 'M ou F').replace('m','M' && 'f','F');
+            var idade = parseInt(prompt('Informe sua idade: '));
+
+            var cat1 = 'Homem com + de 30 anos';
+            var cat2 = 'Mulher com - de 25 anos';
+            var cat3 = 'Homem entre 20 e 30 anos';
+            var cat4 = 'Mulher com - de 20 ou + de 50 anos';
+            var cat5 = 'Homem com + de 40 ou Mulher com + de 35 anos';
+
+            if (sexo == 'M' && idade > 30) {
+                document.write('Sua categoria é: ' + cat1);
+
+            }
+            else if (sexo == 'F' && idade < 25) {
+                document.write('Sua categoria é: ' + cat2);
+
+            }
+            else if (sexo == 'M' && idade > 20 && idade < 30) {
+                document.write('Sua categoria é: ' + cat3);
+
+            }
+            else if (sexo == 'F' && idade < 20 || idade > 50) {
+                document.write('Sua categoria é: ' + cat4);
+
+            }
+            else if (sexo == 'M' && idade > 40) {
+                document.write('Sua categoria é: ' + cat5);
+
+            }
+            else if (sexo == 'F' && idade > 35) {
+                document.write('Sua categoria é: ' + cat5);
+            }
+            else
+                document.write('Sua categoria não existe!');
+
+
+        </script>
+    </body>
+</html>
